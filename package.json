@@ -4,7 +4,7 @@
   "description": "My first Template",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "jest",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "format": "prettier . --write",
@@ -25,6 +25,7 @@
   },
   "homepage": ".",
   "devDependencies": {
+    "@babel/preset-env": "^7.29.7",
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^8.57.0",
     "css-loader": "^7.1.4",
