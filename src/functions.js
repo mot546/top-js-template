@@ -1,8 +1,9 @@
 export const capitalize = (word)=>{
-    const firstLetter = word[0];
-    const restOfTheWord = word.slice(1);
-    const capitalized = firstLetter.toUpperCase() + restOfTheWord;
-    return capitalized;
+    const allAlpha = /[a-zA-Z]/;
+    const firstLetter = [...word].find(char => allAlpha.test(char));
+    const index = [...word].findIndex(char => char === firstLetter);
+    const restOfTheWord = word.slice([index+1]);
+    return firstLetter.toUpperCase() + restOfTheWord;
 };
 
 export const reverseString = (word) => {
@@ -12,3 +13,4 @@ export const reverseString = (word) => {
     }
     return reversedWord;
 };
+capitalize('*tandato');
