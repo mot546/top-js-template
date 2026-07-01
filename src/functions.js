@@ -5,4 +5,10 @@ export const capitalize = (word)=>{
     return capitalized;
 };
 
-export const reverseString = ()=>{};
+export const reverseString = (word) => {
+    let reversedWord = "";
+    for(let i = word.length; i > 0; i -= 1){
+        reversedWord += word[i-1];
+    }
+    return reversedWord;
+};

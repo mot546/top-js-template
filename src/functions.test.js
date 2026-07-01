@@ -3,6 +3,7 @@ import {
     reverseString
 } from './functions.js';
 
+// capitalize
 test('Capitalize first Letter', ()=>{
     const input = ['word', 'example'];
     const expected = ['Word', 'Example'];
@@ -10,6 +11,12 @@ test('Capitalize first Letter', ()=>{
         expect(capitalize(actual)).toBe(expected[index]);
     });
 });
-test('reverseString exists',()=>{
-    expect(reverseString).toBeDefined();
+
+//  reverseString
+test('reverseString working',()=>{
+    const input = ['word', 'example'];
+    const expected = ['drow', 'elpmaxe'];
+    input.forEach((actual, index)=>{
+        expect(reverseString(actual)).toBe(expected[index]);
+    });
 });
